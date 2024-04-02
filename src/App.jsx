@@ -32,17 +32,16 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setpokemonIndex] = useState (0);
   return (
-    <div>
-     
+    <>
+      <NavBar 
+      pokemonIndex={pokemonIndex} 
+      setpokemonIndex={setpokemonIndex} 
+      pokemonList={pokemonList}
+      />
      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-     <NavBar pokemonIndex={pokemonIndex} setpokemonIndex={setpokemonIndex}/>
+    
 
-     {/* {pokemonIndex < pokemonList.length - 1 ? (<button onClick={() => {setpokemonIndex(pokemonIndex + 1)}}>SUIVANT</button>)
-     : null}
-     {pokemonIndex > 0 ? (<button onClick={() => {setpokemonIndex(pokemonIndex - 1)}}>PRECEDENT</button>)
-      : null} */}
-
-    </div>
+    </>
   );
 }
 
