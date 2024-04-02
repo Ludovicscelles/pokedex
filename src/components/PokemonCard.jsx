@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 
 
-function PokemonCard (props){
+function PokemonCard ({props}){
   const { pokemon } = props;
 
     return <p>{!pokemon.imgSrc ? ("???") :
